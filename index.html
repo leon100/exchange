@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+
+</head>
+  <body class="text-center" ng-app="exchangeApp">
+    <div class="container">
+      <div class="jumbotron" ng-controller="exchangeController">
+        <h1 class="display-4">EURO to CNY</h1>
+        <div class="errors">
+          <span class="text-danger" ng-repeat="(key, value) in errors">
+             {{ value }}
+          </span>
+        </div>
+
+        <label>EUR <input type="text" ng-model="amount"></label>
+        <span> = CNY</span> <span>{{exchangeResult}}</span>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button" ng-click="getExchange()">Convert</a>
+        </p>
+
+      </div>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
